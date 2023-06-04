@@ -1,0 +1,45 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "generate-keypairs": "ts-node-dev ./certs/generateKeypairs.ts",
+    "start": "ts-node-dev src/index.ts",
+    "test": "jest --watchAll --no-cache --runInBand --detectOpenHandles"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "./src/test/setup.ts"
+    ]
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.190.0",
+    "@aws-sdk/s3-request-presigner": "^3.190.0",
+    "@fastify/cors": "^8.1.0",
+    "@fastify/passport": "^2.2.0",
+    "@fastify/secure-session": "^5.2.0",
+    "@google-cloud/text-to-speech": "^4.0.3",
+    "@types/jest": "^29.1.2",
+    "@types/node": "^18.8.5",
+    "@types/passport-http-bearer": "^1.0.37",
+    "dotenv": "^16.0.3",
+    "fastify": "^4.8.1",
+    "fastify-multer": "^2.0.3",
+    "jest": "^29.2.0",
+    "mongoose": "^6.6.5",
+    "passport-http-bearer": "^1.0.1",
+    "pino-pretty": "^9.1.1",
+    "react-router-dom": "^6.4.2",
+    "ts-jest": "^29.0.3",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.8.4",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/uuid": "^8.3.4",
+    "mongodb-memory-server": "^8.9.3"
+  }
+}

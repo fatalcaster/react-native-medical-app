@@ -1,0 +1,88 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  // padding: 10%;
+  padding: 1em;
+  label {
+    // background-color: green;
+    text-align: center;
+  }
+}
+$size: min(70vh, 70vw);
+
+.dropZone {
+  border: 3px dashed black;
+  margin: 0;
+  width: $size;
+  height: $size;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.titleInput {
+  margin-top: 5vh;
+  font-size: 1.5rem;
+  text-align: center;
+  width: $size;
+  border: none;
+  border-bottom: 3px black solid;
+  &:focus {
+    outline: none;
+  }
+}
+.imageContainer {
+  max-width: 70%;
+  max-height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .removeImageBtn {
+    position: absolute;
+    right: -1em;
+    top: -1em;
+    background-color: red;
+    border: none;
+    color: white;
+    // padding: 1em;
+    // font-weight: 700;
+    width: 2em;
+    height: 2em;
+    border-radius: 0.2em;
+    &:hover {
+      cursor: pointer;
+      filter: brightness(2);
+    }
+    &:active {
+      transform: scale(1.1);
+    }
+  }
+}
+.create {
+  margin-top: 1em;
+  font-size: 1rem;
+  border: none;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  padding: 1em 2em 1em 2em;
+  &:hover {
+    filter: brightness(2);
+    cursor: pointer;
+  }
+  &:active {
+    transform: scale(1.1);
+  }
+}
+.error {
+  color: red;
+}
+.bannerImg {
+  height: 60vh;
+}

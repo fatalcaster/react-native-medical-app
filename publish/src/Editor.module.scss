@@ -1,0 +1,79 @@
+.container {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  .commandContainer {
+    margin-right: auto;
+  }
+  button {
+    margin: 0.2em;
+    background-color: inherit;
+    border: none;
+    padding: 0.5em 1em 0.5em 1em;
+    font-size: large;
+    &:hover {
+      cursor: pointer;
+    }
+    &:active {
+      transform: scale(1.4);
+    }
+    &.is-active {
+      background-color: gray;
+      filter: brightness(0.8);
+      // filter: brightness(0.5);
+      // transform: scale(1.2);
+    }
+  }
+  .backToFiles {
+    padding: 0;
+    // text-align: end;
+    // width: fit-content;
+    width: 3em;
+    margin: auto 0 1em 0;
+    display: flex;
+    text-decoration: none;
+    color: black;
+    margin-right: auto;
+    > span {
+      min-width: 30ch;
+      margin-left: 0.4em;
+      &:hover {
+        font-weight: 700;
+      }
+    }
+  }
+}
+.documentContainer {
+  max-width: 1440px;
+  background-color: white;
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  // overflow-y: auto;
+}
+.editor {
+  word-break: break-word;
+  width: 80%;
+  display: flex;
+  margin: 5%;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    cursor: text;
+  }
+}
+
+.img {
+  // margin: 0;
+  max-height: 20em;
+  max-width: 100%;
+  text-align: center;
+  // display: block;
+  // align-self: center;
+}
